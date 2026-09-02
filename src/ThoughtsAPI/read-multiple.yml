@@ -1,0 +1,21 @@
+info:
+  name: read-multiple
+  type: http
+
+http:
+  method: GET
+  url: http://127.0.0.1:8000/thoughts?PageNumber=1&PageSize=2
+  params:
+    - name: PageNumber
+      value: "1"
+      type: query
+    - name: PageSize
+      value: "2"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
